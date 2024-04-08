@@ -22,10 +22,18 @@
                             <td>{{ $project->title}}</td>
                             <td>{{ $project->slug}}</td>
                             <td>{{ $project->content}}</td>
+
+                            <td>
+                                <form action="{{ route('admin.projects.destroy', $project) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button>Delete</button>
+                                </form>
+                            </td>
                         </tr>
                     @empty
                         <tr>
-                            <td>Not Found</td>
+                            <td colspan="100%">Not Found</td>
                         </tr>
                     @endforelse
                 </tbody>
