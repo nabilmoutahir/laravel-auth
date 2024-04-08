@@ -22,6 +22,12 @@
               </li>
             @endif
           @else
+            {{-- INDEX --}}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('admin.projects.index') }}">Index</a>
+            </li>
+
+            {{-- ADMIN DROP DOWN --}}
             <li class="nav-item dropdown">
               <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
                 href="#" id="navbarDropdown" role="button" v-pre>
@@ -29,8 +35,17 @@
               </a>
 
               <div aria-labelledby="navbarDropdown" class="dropdown-menu dropdown-menu-right">
-                <a class="dropdown-item" href="{{ route('admin.dashboard') }}"> Dashboard</a>
-                <a class="dropdown-item" href="{{ url('profile') }}"> Profile</a>
+                {{-- DASHBOARD LINK --}}
+                <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
+                  Dashboard
+                </a>
+
+                {{-- PROFILE LINK --}}
+                <a class="dropdown-item" href="{{ url('profile') }}">
+                  Profile
+                </a>
+
+                {{-- LOG OUT --}}
                 <a class="dropdown-item" href="{{ route('logout') }}" id="logout-link">
                   Logout
                 </a>
