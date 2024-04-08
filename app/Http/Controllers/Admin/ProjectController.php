@@ -1,6 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
+// utile
+use App\Http\Controllers\Controller;
+
 
 use App\Models\Project;
 use Illuminate\Http\Request;
