@@ -32,7 +32,9 @@ Route::middleware('auth')
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])
       ->name('dashboard');
 
-    Route::resource('projects', ProjectController::class);   
+    Route::resource('projects', ProjectController::class);
+
+    Route::delete('admin/projects/{project}', [ProjectController::class, 'destroy'])->name('project.destroy');
 
   });
 
